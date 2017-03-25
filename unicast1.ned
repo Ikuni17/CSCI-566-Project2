@@ -6,7 +6,7 @@ import inet.node.rtp.RTPHost;
 import ned.DatarateChannel;
 
 
-network RTPUnicast1
+network CloudGaming
 {
     types:
         channel ethernet extends DatarateChannel
@@ -35,24 +35,6 @@ network RTPUnicast1
                 bandwidth = 8000;
                 @display("p=250,150");
         }
-//        host3: RTPHost {
-//            parameters:
-//                forwarding = false;
-//                profileName = "inet.transportlayer.rtp.RTPAVProfile";
-//                destinationAddress = "host4";
-//                portNumber = 5004;
-//                bandwidth = 8000;
-//                @display("p=150,250");
-//        }
-//        host4: RTPHost {
-//            parameters:
-//                forwarding = false;
-//                profileName = "inet.transportlayer.rtp.RTPAVProfile";
-//                destinationAddress = "host1";
-//                portNumber = 5004;
-//                bandwidth = 8000;
-//                @display("p=50,150");
-//        }
         router1: Router {
             parameters:
                 @display("p=150,150");
@@ -66,6 +48,4 @@ network RTPUnicast1
     connections:
         server.pppg++ <--> ethernet <--> router1.pppg++;
         client.pppg++ <--> ethernet <--> router1.pppg++;
-        //host3.pppg++ <--> ethernet <--> router1.pppg++;
-        //host4.pppg++ <--> ethernet <--> router1.pppg++;
 }
