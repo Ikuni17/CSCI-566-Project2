@@ -1,0 +1,231 @@
+file 183807 1490402888                                          
+version 2
+run General-0-20170324-18:37:22-3568
+attr configname General
+attr datetime 20170324-18:37:22
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network RTPUnicast1
+attr processid 3568
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.autoOutputFileNames true
+param **.client.**.commonName "\"???\""
+param **.payloadType 32
+param **.server.fileName "\"./data/game.gdf\""
+param **.sessionEnterDelay 10s
+param **.sessionLeaveDelay 60s
+param **.transmissionStartDelay 20s
+param **.transmissionStopDelay 5s
+
+vector 17  RTPUnicast1.client.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 18  RTPUnicast1.client.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 42  RTPUnicast1.server.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 43  RTPUnicast1.server.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 58  RTPUnicast1.router1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 59  RTPUnicast1.router1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 69  RTPUnicast1.router1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 70  RTPUnicast1.router1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 0  RTPUnicast1.client.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 14  RTPUnicast1.client.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 16  RTPUnicast1.client.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 23  RTPUnicast1.client.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 19  RTPUnicast1.client.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 72  RTPUnicast1.router1.ppp[1].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 76  RTPUnicast1.router1.ppp[1].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 55  RTPUnicast1.router1.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 57  RTPUnicast1.router1.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 64  RTPUnicast1.router1.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 60  RTPUnicast1.router1.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 45  RTPUnicast1.server.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 49  RTPUnicast1.server.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 26  RTPUnicast1.server.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 27  RTPUnicast1.server.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 32  RTPUnicast1.server.rtcp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 33  RTPUnicast1.server.rtcp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 25  RTPUnicast1.server.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 39  RTPUnicast1.server.ppp[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 41  RTPUnicast1.server.ppp[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 48  RTPUnicast1.server.ppp[0].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 44  RTPUnicast1.server.ppp[0].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 61  RTPUnicast1.router1.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 65  RTPUnicast1.router1.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 66  RTPUnicast1.router1.ppp[1].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 68  RTPUnicast1.router1.ppp[1].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 75  RTPUnicast1.router1.ppp[1].ppp  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 71  RTPUnicast1.router1.ppp[1].ppp  txPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, vector(packetBytes)"
+vector 20  RTPUnicast1.client.ppp[0].ppp  rxPkOk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, vector(packetBytes)"
+vector 24  RTPUnicast1.client.ppp[0].ppp  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 1  RTPUnicast1.client.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 2  RTPUnicast1.client.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 7  RTPUnicast1.client.rtcp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 8  RTPUnicast1.client.rtcp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 5  RTPUnicast1.client.rtp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 6  RTPUnicast1.client.rtp  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+0	8191 397 29 5808 12.309136991971 73.948134438381 15 29 53 515 19047
+1	8588 7826 67 5919 12.80928058582 101.336305095048 274 28 1765 371301 547661841
+2	16414 7486 67 5919 12.80928058582 101.336305095048 274 1 274 37675 6894525
+5	23900 7271 227 5549 32.81173978582 37.011667785904 253 1170 1757 368621 541726177
+6	31171 9801 227 5549 32.81173978582 37.011667785904 253 0.002211344826 0.003150544826 0.675647840978 0.0018162400187219
+7	40972 555 68 5920 12.80928058582 101.336305095048 21 20 40 488 12384
+8	41527 807 68 5920 12.80928058582 101.336305095048 21 0.000371344826 0.000403344826 0.007907041346 2.979877049874e-006
+14	42334 412 32 5812 12.309136991971 73.948134438381 15 49 73 815 45647
+16	42746 397 32 5812 12.309136991971 73.948134438381 15 0 0 0 0
+17	43143 10 0 0 0 0 1 0 0 0 0
+18	43153 804 0 5814 0 73.948185638381 31 0 1 15 15
+19	43957 412 33 5813 12.309136991971 73.948134438381 15 56 80 920 57792
+20	44369 8100 65 5917 12.80928058582 101.336305095048 274 55 1792 378699 567911841
+23	52469 412 33 5813 12.309136991971 73.948134438381 15 49 73 815 45647
+24	52881 8100 65 5917 12.80928058582 101.336305095048 274 48 1785 376781 562623481
+25	60981 8103 46 5905 12.808909240994 101.335920950222 274 28 1765 371301 547661841
+26	69084 413 42 5822 12.309613459544 73.948623705954 15 29 53 515 19047
+27	69497 404 42 5822 12.309613459544 73.948623705954 15 1 15 120 1240
+32	69901 413 43 5823 12.309613459544 73.948623705954 15 21 45 395 11767
+33	70314 593 43 5823 12.309613459544 73.948623705954 15 0.000476467573 0.000514867573 0.007275013595 3.5318834404957e-006
+39	70907 8103 50 5909 12.808909240994 101.335920950222 274 48 1785 376781 562623481
+41	79010 7323 50 5909 12.808909240994 101.335920950222 274 0 0 0 0
+42	86333 10 0 0 0 0 1 0 0 0 0
+43	86343 14656 0 5911 0 101.335971350222 549 0 1 274 274
+44	100999 8103 52 5910 12.808909240994 101.335920950222 274 55 1792 378699 567911841
+45	109102 413 40 5820 12.309613459544 73.948623705954 15 56 80 920 57792
+48	109515 8103 52 5910 12.808909240994 101.335920950222 274 48 1785 376781 562623481
+49	117618 413 40 5820 12.309613459544 73.948623705954 15 49 73 815 45647
+55	118031 411 37 5817 12.309374420505 73.948378266915 15 49 73 815 45647
+57	118442 396 37 5817 12.309374420505 73.948378266915 15 0 0 0 0
+58	118838 10 0 0 0 0 1 0 0 0 0
+59	118848 802 0 5819 0 73.948429466915 31 0 1 15 15
+60	119650 411 38 5818 12.309374420505 73.948378266915 15 56 80 920 57792
+61	120061 8104 60 5912 12.809050591485 101.336068700713 274 55 1792 378699 567911841
+64	128165 411 38 5818 12.309374420505 73.948378266915 15 49 73 815 45647
+65	128576 8104 60 5912 12.809050591485 101.336068700713 274 48 1785 376781 562623481
+66	136680 8104 62 5914 12.809050591485 101.336068700713 274 48 1785 376781 562623481
+68	144784 7324 62 5914 12.809050591485 101.336068700713 274 0 0 0 0
+69	152108 10 0 0 0 0 1 0 0 0 0
+70	152118 14659 0 5916 0 101.336119100713 549 0 1 274 274
+71	166777 8104 63 5915 12.809050591485 101.336068700713 274 55 1792 378699 567911841
+72	174881 411 35 5815 12.309374420505 73.948378266915 15 56 80 920 57792
+75	175292 8104 63 5915 12.809050591485 101.336068700713 274 48 1785 376781 562623481
+76	183396 411 35 5815 12.309374420505 73.948378266915 15 49 73 815 45647
