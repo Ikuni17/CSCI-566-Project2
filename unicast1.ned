@@ -11,6 +11,7 @@ network CloudGaming
     parameters:
         double numrouters @prompt("Number of routers") = default(1);
         @display("bgb=475,451");
+        double procDelay @unit("s") = default(1s);
     types:
         channel ethernet extends DatarateChannel
         {
@@ -46,6 +47,7 @@ network CloudGaming
                 destinationAddress = "client1";
                 portNumber = 5004;
                 bandwidth = 10000;
+                
                 //@display("p=250,150");
         }
         router[numrouters]: Router {

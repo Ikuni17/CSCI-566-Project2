@@ -1,14 +1,14 @@
 version 2
-run General-0-20170325-18:02:38-13636
+run General-0-20170325-18:37:27-12212
 attr configname General
-attr datetime 20170325-18:02:38
+attr datetime 20170325-18:37:27
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network CloudGaming
-attr processid 13636
+attr processid 12212
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -19,6 +19,7 @@ param **.client.**.commonName "\"Thin Gaming Client\""
 param **.payloadType 32
 param **.server.**.commonName "\"Cloud Gaming Server\""
 param **.server.fileName "\"./data/game.gdf\""
+param **.server.networkLayer.ip.procDelay 1s
 param **.sessionEnterDelay 10s
 param **.sessionLeaveDelay 60s
 param **.transmissionStartDelay 20s
@@ -117,7 +118,7 @@ attr title  "dropped packets, sum(packetBytes)"
 scalar CloudGaming.client1.ppp[0].queue 	rcvdPk:count 	15
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CloudGaming.client1.ppp[0].queue 	rcvdPk:sum(packetBytes) 	800
+scalar CloudGaming.client1.ppp[0].queue 	rcvdPk:sum(packetBytes) 	968
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
 scalar CloudGaming.client1.ppp[0].ppp 	droppedPkBitError:count 	0
@@ -144,14 +145,14 @@ scalar CloudGaming.client1.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	379182
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, sum(packetBytes)"
-scalar CloudGaming.client1.ppp[0].ppp 	txState:timeavg 	7.1445334540382e-007
+scalar CloudGaming.client1.ppp[0].ppp 	txState:timeavg 	2.7565527294103e-007
 attr interpolationmode  sample-hold
 attr title  "tx state, timeavg"
 scalar CloudGaming.client1.ppp[0].ppp 	rcvdPkFromHL:count 	15
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, count"
-scalar CloudGaming.client1.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	800
+scalar CloudGaming.client1.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	968
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
@@ -167,7 +168,7 @@ scalar CloudGaming.client1.ppp[0].ppp 	txPk:count 	15
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets transmitted, count"
-scalar CloudGaming.client1.ppp[0].ppp 	txPk:sum(packetBytes) 	905
+scalar CloudGaming.client1.ppp[0].ppp 	txPk:sum(packetBytes) 	1073
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets transmitted, sum(packetBytes)"
@@ -184,7 +185,7 @@ scalar CloudGaming.client1.udp 	sentPk:count 	15
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, count"
-scalar CloudGaming.client1.udp 	sentPk:sum(packetBytes) 	500
+scalar CloudGaming.client1.udp 	sentPk:sum(packetBytes) 	668
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, sum(packetBytes)"
@@ -196,58 +197,58 @@ scalar CloudGaming.client1.udp 	rcvdPk:sum(packetBytes) 	371784
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
-scalar CloudGaming.client1.rtp 	rcvdPk:count 	253
+scalar CloudGaming.client1.rtp 	rcvdPk:count 	38
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar CloudGaming.client1.rtp 	rcvdPk:sum(packetBytes) 	368621
+scalar CloudGaming.client1.rtp 	rcvdPk:sum(packetBytes) 	57335
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
 statistic CloudGaming.client1.rtp 	endToEndDelay:histogram
-field count 253
-field mean 0.000522064826
-field stddev 2.172352685563e-005
-field sum 0.132082400978
-field sqrsum 6.9074497412242e-005
-field min 0.000476144826
-field max 0.000570064826
+field count 38
+field mean 19.786429776607
+field stddev 10.927828416904
+field sum 751.88433151106
+field sqrsum 19295.551580218
+field min 1.59477081942
+field max 37.978103672741
 attr interpolationmode  none
 attr source  messageAge(rcvdPk)
 attr title  "end-to-end delay, histogram"
 attr unit  s
 bin	-INF	0
-bin	0.000466624826	0
-bin	0.00047122215933333	0
-bin	0.00047581949266667	10
-bin	0.000480416826	3
-bin	0.00048501415933333	5
-bin	0.00048961149266667	9
-bin	0.000494208826	12
-bin	0.00049880615933333	18
-bin	0.00050340349266667	22
-bin	0.000508000826	13
-bin	0.00051259815933333	9
-bin	0.00051719549266667	18
-bin	0.000521792826	20
-bin	0.00052639015933333	17
-bin	0.00053098749266667	13
-bin	0.000535584826	21
-bin	0.00054018215933333	21
-bin	0.00054477949266667	20
-bin	0.000549376826	12
-bin	0.00055397415933333	2
-bin	0.00055857149266667	4
-bin	0.000563168826	3
-bin	0.00056776615933333	1
-bin	0.00057236349266667	0
-bin	0.000576960826	0
-bin	0.00058155815933333	0
-bin	0.00058615549266667	0
-bin	0.000590752826	0
-bin	0.00059535015933333	0
-bin	0.00059994749266667	0
-bin	0.000604544826	0
+bin	-16.596895607241	0
+bin	-14.171340083686	0
+bin	-11.745784560131	0
+bin	-9.3202290365763	0
+bin	-6.8946735130216	0
+bin	-4.4691179894668	0
+bin	-2.0435624659121	0
+bin	0.38199305764263	2
+bin	2.8075485811974	2
+bin	5.2331041047521	3
+bin	7.6586596283068	2
+bin	10.084215151862	3
+bin	12.509770675416	2
+bin	14.935326198971	3
+bin	17.360881722526	2
+bin	19.78643724608	2
+bin	22.211992769635	3
+bin	24.63754829319	2
+bin	27.063103816745	3
+bin	29.488659340299	2
+bin	31.914214863854	3
+bin	34.339770387409	2
+bin	36.765325910964	2
+bin	39.190881434518	0
+bin	41.616436958073	0
+bin	44.041992481628	0
+bin	46.467548005183	0
+bin	48.893103528737	0
+bin	51.318659052292	0
+bin	53.744214575847	0
+bin	56.169770099402	0
 scalar CloudGaming.client1.rtcp 	rcvdPk:count 	21
 attr interpolationmode  none
 attr source  rcvdPk
@@ -258,48 +259,48 @@ attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
 statistic CloudGaming.client1.rtcp 	endToEndDelay:histogram
 field count 21
-field mean 0.0002963429212381
-field stddev 1.1558876201426e-006
-field sum 0.006223201346
-field sqrsum 1.8442283878503e-006
-field min 0.000295824826
-field max 0.000299024826
+field mean 166.34787108734
+field stddev 107.51126042483
+field sum 3493.3052928342
+field sqrsum 812277.32088383
+field min 1.000295824826
+field max 247.76602941118
 attr interpolationmode  none
 attr source  messageAge(rcvdPk)
 attr title  "end-to-end delay, histogram"
 attr unit  s
 bin	-INF	0
-bin	0.000294224826	0
-bin	0.00029443815933333	0
-bin	0.00029465149266667	0
-bin	0.000294864826	0
-bin	0.00029507815933333	0
-bin	0.00029529149266667	0
-bin	0.000295504826	0
-bin	0.00029571815933333	17
-bin	0.00029593149266667	0
-bin	0.000296144826	0
-bin	0.00029635815933333	0
-bin	0.00029657149266667	0
-bin	0.000296784826	0
-bin	0.00029699815933333	1
-bin	0.00029721149266667	0
-bin	0.000297424826	0
-bin	0.00029763815933333	0
-bin	0.00029785149266667	0
-bin	0.000298064826	0
-bin	0.00029827815933333	0
-bin	0.00029849149266667	0
-bin	0.000298704826	0
-bin	0.00029891815933333	3
-bin	0.00029913149266667	0
-bin	0.000299344826	0
-bin	0.00029955815933333	0
-bin	0.00029977149266667	0
-bin	0.000299984826	0
-bin	0.00030019815933333	0
-bin	0.00030041149266667	0
-bin	0.000300624826	0
+bin	-122.38257096835	0
+bin	-105.93152206259	0
+bin	-89.480473156836	0
+bin	-73.02942425108	0
+bin	-56.578375345323	0
+bin	-40.127326439566	0
+bin	-23.676277533809	0
+bin	-7.2252286280524	6
+bin	9.2258202777044	0
+bin	25.676869183461	0
+bin	42.127918089218	0
+bin	58.578966994975	0
+bin	75.030015900732	0
+bin	91.481064806488	0
+bin	107.93211371225	0
+bin	124.383162618	0
+bin	140.83421152376	0
+bin	157.28526042952	0
+bin	173.73630933527	0
+bin	190.18735824103	0
+bin	206.63840714679	4
+bin	223.08945605254	6
+bin	239.5405049583	5
+bin	255.99155386406	0
+bin	272.44260276981	0
+bin	288.89365167557	0
+bin	305.34470058133	0
+bin	321.79574948708	0
+bin	338.24679839284	0
+bin	354.6978472986	0
+bin	371.14889620435	0
 scalar CloudGaming.server.networkLayer.arp 	sentReply:count 	0
 attr title  "ARP replies sent, count"
 scalar CloudGaming.server.networkLayer.arp 	sentReq:count 	0
@@ -416,11 +417,11 @@ scalar CloudGaming.server.ppp[0].ppp 	rxPkOk:count 	15
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, count"
-scalar CloudGaming.server.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	905
+scalar CloudGaming.server.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1073
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, sum(packetBytes)"
-scalar CloudGaming.server.ppp[0].ppp 	txState:timeavg 	0.00029934568885847
+scalar CloudGaming.server.ppp[0].ppp 	txState:timeavg 	9.7412411653612e-005
 attr interpolationmode  sample-hold
 attr title  "tx state, timeavg"
 scalar CloudGaming.server.ppp[0].ppp 	rcvdPkFromHL:count 	274
@@ -435,7 +436,7 @@ scalar CloudGaming.server.ppp[0].ppp 	passedUpPk:count 	15
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar CloudGaming.server.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	800
+scalar CloudGaming.server.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	968
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
@@ -468,7 +469,7 @@ scalar CloudGaming.server.udp 	rcvdPk:count 	15
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar CloudGaming.server.udp 	rcvdPk:sum(packetBytes) 	500
+scalar CloudGaming.server.udp 	rcvdPk:sum(packetBytes) 	668
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
@@ -528,54 +529,54 @@ scalar CloudGaming.server.rtcp 	rcvdPk:count 	15
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, count"
-scalar CloudGaming.server.rtcp 	rcvdPk:sum(packetBytes) 	380
+scalar CloudGaming.server.rtcp 	rcvdPk:sum(packetBytes) 	548
 attr interpolationmode  none
 attr source  rcvdPk
 attr title  "packets received, sum(packetBytes)"
 statistic CloudGaming.server.rtcp 	endToEndDelay:histogram
 field count 15
-field mean 0.00039652090633333
-field stddev 1.5800663036371e-006
-field sum 0.005947813595
-field sqrsum 2.3584673899245e-006
-field min 0.000395667573
-field max 0.000399507573
+field mean 155.64850881638
+field stddev 115.50649843669
+field sum 2334.7276322457
+field sqrsum 550181.39098693
+field min 1.000395667573
+field max 250.37338135812
 attr interpolationmode  none
 attr source  messageAge(rcvdPk)
 attr title  "end-to-end delay, histogram"
 attr unit  s
 bin	-INF	0
-bin	0.000393747573	0
-bin	0.000394003573	0
-bin	0.000394259573	0
-bin	0.000394515573	0
-bin	0.000394771573	0
-bin	0.000395027573	0
-bin	0.000395283573	0
-bin	0.000395539573	11
-bin	0.000395795573	0
-bin	0.000396051573	0
-bin	0.000396307573	0
-bin	0.000396563573	0
-bin	0.000396819573	1
-bin	0.000397075573	0
-bin	0.000397331573	0
-bin	0.000397587573	0
-bin	0.000397843573	0
-bin	0.000398099573	0
-bin	0.000398355573	0
-bin	0.000398611573	0
-bin	0.000398867573	0
-bin	0.000399123573	0
-bin	0.000399379573	3
-bin	0.000399635573	0
-bin	0.000399891573	0
-bin	0.000400147573	0
-bin	0.000400403573	0
-bin	0.000400659573	0
-bin	0.000400915573	0
-bin	0.000401171573	0
-bin	0.000401427573	0
+bin	-123.6860971777	0
+bin	-107.061231465	0
+bin	-90.436365752296	0
+bin	-73.811500039592	0
+bin	-57.186634326889	0
+bin	-40.561768614185	0
+bin	-23.936902901482	0
+bin	-7.3120371887787	5
+bin	9.3128285239247	0
+bin	25.937694236628	0
+bin	42.562559949332	0
+bin	59.187425662035	0
+bin	75.812291374738	0
+bin	92.437157087442	0
+bin	109.06202280015	0
+bin	125.68688851285	0
+bin	142.31175422555	1
+bin	158.93661993826	0
+bin	175.56148565096	0
+bin	192.18635136366	0
+bin	208.81121707637	0
+bin	225.43608278907	4
+bin	242.06094850177	5
+bin	258.68581421448	0
+bin	275.31067992718	0
+bin	291.93554563988	0
+bin	308.56041135259	0
+bin	325.18527706529	0
+bin	341.81014277799	0
+bin	358.4350084907	0
+bin	375.0598742034	0
 scalar CloudGaming.router[0].networkLayer.arp 	sentReply:count 	0
 attr title  "ARP replies sent, count"
 scalar CloudGaming.router[0].networkLayer.arp 	sentReq:count 	0
@@ -669,7 +670,7 @@ attr title  "dropped packets, sum(packetBytes)"
 scalar CloudGaming.router[0].ppp[0].queue 	rcvdPk:count 	15
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CloudGaming.router[0].ppp[0].queue 	rcvdPk:sum(packetBytes) 	800
+scalar CloudGaming.router[0].ppp[0].queue 	rcvdPk:sum(packetBytes) 	968
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
 scalar CloudGaming.router[0].ppp[0].ppp 	droppedPkBitError:count 	0
@@ -696,14 +697,14 @@ scalar CloudGaming.router[0].ppp[0].ppp 	rxPkOk:sum(packetBytes) 	379182
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, sum(packetBytes)"
-scalar CloudGaming.router[0].ppp[0].ppp 	txState:timeavg 	7.1445334540382e-007
+scalar CloudGaming.router[0].ppp[0].ppp 	txState:timeavg 	2.7565527294103e-007
 attr interpolationmode  sample-hold
 attr title  "tx state, timeavg"
 scalar CloudGaming.router[0].ppp[0].ppp 	rcvdPkFromHL:count 	15
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, count"
-scalar CloudGaming.router[0].ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	800
+scalar CloudGaming.router[0].ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	968
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, sum(packetBytes)"
@@ -719,7 +720,7 @@ scalar CloudGaming.router[0].ppp[0].ppp 	txPk:count 	15
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets transmitted, count"
-scalar CloudGaming.router[0].ppp[0].ppp 	txPk:sum(packetBytes) 	905
+scalar CloudGaming.router[0].ppp[0].ppp 	txPk:sum(packetBytes) 	1073
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets transmitted, sum(packetBytes)"
@@ -805,11 +806,11 @@ scalar CloudGaming.router[0].ppp[1].ppp 	rxPkOk:count 	15
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, count"
-scalar CloudGaming.router[0].ppp[1].ppp 	rxPkOk:sum(packetBytes) 	905
+scalar CloudGaming.router[0].ppp[1].ppp 	rxPkOk:sum(packetBytes) 	1073
 attr interpolationmode  none
 attr source  rxPkOk
 attr title  "packets received OK, sum(packetBytes)"
-scalar CloudGaming.router[0].ppp[1].ppp 	txState:timeavg 	0.00029934568885847
+scalar CloudGaming.router[0].ppp[1].ppp 	txState:timeavg 	9.7412411653612e-005
 attr interpolationmode  sample-hold
 attr title  "tx state, timeavg"
 scalar CloudGaming.router[0].ppp[1].ppp 	rcvdPkFromHL:count 	274
@@ -824,7 +825,7 @@ scalar CloudGaming.router[0].ppp[1].ppp 	passedUpPk:count 	15
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, count"
-scalar CloudGaming.router[0].ppp[1].ppp 	passedUpPk:sum(packetBytes) 	800
+scalar CloudGaming.router[0].ppp[1].ppp 	passedUpPk:sum(packetBytes) 	968
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, sum(packetBytes)"
